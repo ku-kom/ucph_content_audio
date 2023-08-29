@@ -1,0 +1,23 @@
+tt_content.ucph_content_audio >
+# CTYPE: AUDIO
+tt_content.ucph_content_audio =< lib.contentElement
+tt_content.ucph_content_audio {
+    templateName = AudioList
+
+    templateRootPaths {
+        115 = EXT:ucph_content_audio/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        115 = EXT:ucph_content_audio/Resources/Private/Partials/
+    }
+    layoutRootPaths {
+        115 = EXT:ucph_content_audio/Resources/Private/Layouts/
+    }
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = assets
+        }
+    }
+}

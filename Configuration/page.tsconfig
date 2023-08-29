@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+  image {
+    header = Audio
+    elements {
+      ucph_content_audio {
+        iconIdentifier = ucph_content_audio_icon
+        title = LLL:EXT:ucph_content_audio/Resources/Private/Language/locallang_be.xlf:ucph_content_audio_title
+        description = LLL:EXT:ucph_content_audio/Resources/Private/Language/locallang_be.xlf:ucph_content_audio_desc
+        tt_content_defValues {
+          CType = ucph_content_audio
+        }
+      }
+    }
+    show := addToList(ucph_content_audio)
+  }
+}

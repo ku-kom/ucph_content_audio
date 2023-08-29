@@ -1,0 +1,17 @@
+{
+    "name": "university-of-copenhagen/ucph-content-audio",
+    "type": "typo3-cms-extension",
+    "description": "UCPH TYPO3 content element \"Audio\"",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversityOfCopenhagen\\UcphContentAudio\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ucph_content_audio"
+        }
+    }
+}
