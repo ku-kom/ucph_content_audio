@@ -2,21 +2,23 @@
 <f:layout name="Default" />
 <f:section name="Main">
     <f:if condition="{files}">
-        <ul class="audio-list">
+        <ul class="list-unstyled audio-list">
             <f:for each="{files}" as="file">
                 <li class="audio-list-item">
-                    <div class="audio-heading">
-                        <f:if condition="{file.properties.title}">
-                            <f:then>{file.properties.title}</f:then>
-                            <f:else>{file.properties.name}</f:else>
+                    <figure>
+                        <h3 class="audio-heading">
+                            <f:if condition="{file.properties.title}">
+                                <f:then>{file.properties.title}</f:then>
+                                <f:else>{file.properties.name}</f:else>
+                            </f:if>
+                        </h3>
+                        <div class="audio-file">
+                            <f:render partial="Audio" arguments="{_all}" />
+                        </div>
+                        <f:if condition="{file.properties.description}">
+                            <figcaption>{file.properties.description}</figcaption>
                         </f:if>
-                    </div>
-                    <f:if condition="{file.properties.description}">
-                        <p class="audio-description">{file.properties.description}</p>
-                    </f:if>
-                    <div class="audio-file">
-                        <f:render partial="Audio" arguments="{_all}" />
-                    </div>
+                    </figure>
                 </li>
             </f:for>
         </ul>
